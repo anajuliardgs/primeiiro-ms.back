@@ -1,0 +1,16 @@
+package br.com.nava.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UsuarioController {
+
+	@GetMapping("usuarios")
+	public UsuarioEntity getUsuario() {
+		UsuarioEntity e = 
+				new UsuarioEntity(1, "Fabrizio", "fabrizio@grandeporte.com.br");
+		
+		return e;
+	}
+}
